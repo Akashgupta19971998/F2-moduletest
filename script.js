@@ -44,17 +44,21 @@ function function2(){
     let countDice=0;
     let countDiceAttempt=0;
 
-    function click(){
+    function clickk(){
+        console.log("function called")
         if(countDice<=3){
     let  arr= ["1", "2", "3", "4", "5", "6"]
-
     let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
     let randomDice = arr[randomIndex]
-     count1+=Number(randomDice);
+     countDice+=Number(randomDice);
      console.log(randomDice)
-     console.log(count1)
-    number[diceImage].innerText = randomDice
+     console.log(countDice)
+    number[0].innerText = randomDice;
+    console.log(number[0])
     countDice++;
+        } 
+        else{
+            alert("3 coutns done")
         }
     }
 
