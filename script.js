@@ -17,13 +17,20 @@ let diceImage=document.getElementById('dice_image')
 let number=document.getElementById('randomNumber')
 let outputAfterCount=document.getElementById('badLuck')
 let finalOutput=document.getElementById('randomText')
+let sum=document.getElementById('sum')
+let congratulationImage=document.getElementById('congratulationImage')
 
 function show(){
      form.style.display="block";
+     diceImage.style.display="none";
+     congratulationImage.style.display="none"
+    //  show().disabled=false;
 }
 
 function showOutput(){
     form.style.display="none";
+    congratulationImage.style.display="none"
+    // diceImage.style.display="none";
     userDetail_name.innerText="Name : "+name.value;
     userDetail_username.innerText="Username : "+username.value;
 }
@@ -35,6 +42,8 @@ function function2(){
     diceImage.style.display="block";
     userDetail_name.style.display="none";
     userDetail_username.style.display="none";
+    congratulationImage.style.display="none"
+    finalOutput.style.display="none";
     //image3.style.display="none";
     // function rolldice(btn_id){
     //btns[btn_id].disabled = true
@@ -68,7 +77,8 @@ function function2(){
             let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
             let randomDiceNumber = arr[randomIndex];
             diceSum += randomDiceNumber;
-            number.innerText=randomDiceNumber;
+            number.innerText="Dice click Value = "+randomDiceNumber;
+            // sum.innerText="Sum of dices = "+diceSum;
             countDiceClick++;
         }
         if(countDiceClick === 3 && diceSum <=10 && countDiceAttempt===1){
@@ -85,10 +95,8 @@ function function2(){
             countDiceAttempt++;
             diceSum=0;
             countDiceClick=0;
-            console.log("try")
             alert("please try again");
         }
-        
         else if(countDiceClick === 3 && diceSum > 10){
             clickImage4 = 1;
             countDiceAttempt++;
@@ -112,12 +120,18 @@ function function2(){
     function createRandom(){
         diceImage.style.display="none";
         number.style.display="none";
+        sum.style.display="none";
         var random='';
         var characters='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz'
         for(var i=0;i<12;i++){
             random+=characters.charAt(Math.floor(Math.random() *characters.length));
         }
         finalOutput.innerText=random;
+        //congratulationImage.src="https://thumbs.dreamstime.com/z/congratulations-slogan-well-done-chalkboard-celebration-thumbs-up-76886933.jpg";
+        congratulationImage.style.display="block"
+        // document.getElementById('image')
+        //             .style.display = "block";
+        console.log(congratulationImage)
     }
 
 

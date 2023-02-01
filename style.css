@@ -16,9 +16,7 @@
  .from{
    text-align: center;
    font-size: 40px;
-
  }
-
  .userDataForm{
    display: none;
  }
@@ -26,6 +24,9 @@
   text-align: center;
  }
  #userDetail_username{
+  text-align: center;
+ }
+ #sum{
   text-align: center;
  }
  #dice_image{
@@ -39,4 +40,8 @@
  }
  #randomText{
   text-align: center;
+ }
+ #congratulationImage{
+  display: none;
+  margin-top: 20px;
  }
