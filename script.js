@@ -20,6 +20,11 @@ let finalOutput=document.getElementById('randomText')
 let sum=document.getElementById('sum')
 let congratulationImage=document.getElementById('congratulationImage')
 
+image1.onclick=""
+image2.onclick=""
+image3.onclick=""
+image4.onclick=""
+
 function show(){
      form.style.display="block";
      diceImage.style.display="none";
