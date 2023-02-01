@@ -14,7 +14,9 @@ let form=document.getElementById('userForm')
 let userDetail_name=document.getElementById('userDetail_name')
 let userDetail_username=document.getElementById('userDetail_username')
 let diceImage=document.getElementById('dice_image')
-let number=document.getElementsByTagName('h1')
+let number=document.getElementById('randomNumber')
+let outputAfterCount=document.getElementById('badLuck')
+let finalOutput=document.getElementById('randomText')
 
 function show(){
      form.style.display="block";
@@ -34,35 +36,89 @@ function function2(){
     userDetail_name.style.display="none";
     userDetail_username.style.display="none";
     //image3.style.display="none";
-
     // function rolldice(btn_id){
     //btns[btn_id].disabled = true
-
     }
+    // let diceSum=0;
+    // let countDice=0;
+    // let countDiceAttempt=0;
+    // let clickImage4 = 0;
+    // function clicked(){
+    //     if(countDice<3){
+    // let  arr= ["1", "2", "3", "4", "5", "6"]
+    // let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
+    // let randomDice = arr[randomIndex]
+    //  diceSum+=Number(randomDice);
+    // number[0].innerText = randomDice;
+    // countDice++;
+    // countDiceAttempt++;
+    //     } 
+    //         else{
+    //             alert("3 coutns done")
+    //         }
+    // }
 
     let diceSum=0;
-    let countDice=0;
+    let countDiceClick=0;
     let countDiceAttempt=0;
-
-    function clicked(){
-        console.log("function called")
-        if(countDice<=3){
-    let  arr= ["1", "2", "3", "4", "5", "6"]
-    let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
-    let randomDice = arr[randomIndex]
-     diceSum+=Number(randomDice);
-    number[0].innerText = randomDice;
-    countDice++;
-        } 
-        else{
-            alert("3 coutns done")
+    let clickImage4 = 0;
+    let  arr= [1, 2, 3, 4, 5, 6];
+    function clickDice(){
+        if(countDiceClick <3 && countDiceAttempt<2){
+            let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
+            let randomDiceNumber = arr[randomIndex];
+            diceSum += randomDiceNumber;
+            number.innerText=randomDiceNumber;
+            countDiceClick++;
         }
+        if(countDiceClick === 3 && diceSum <=10 && countDiceAttempt===1){
+            // console.log("randomDiceNumber",randomDiceNumber);
+            clickImage4 = 0;
+            countDiceAttempt++;
+            diceSum=0;
+            countDiceClick=0;
+            const op="bad luck"
+            outputAfterCount.innerText=op;
+        }
+        else if(countDiceClick === 3 && diceSum <= 10){
+            clickImage4 = 0;
+            countDiceAttempt++;
+            diceSum=0;
+            countDiceClick=0;
+            console.log("try")
+            alert("please try again");
+        }
+        
+        else if(countDiceClick === 3 && diceSum > 10){
+            clickImage4 = 1;
+            countDiceAttempt++;
+            // countDiceAttempt=0;
+        }
+    //     if(countDiceClick<=3){
+    // let  arr= ["1", "2", "3", "4", "5", "6"]
+    
+    // let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
+    // let randomDice = arr[randomIndex]
+    //  count1+=Number(randomDice);
+    //  console.log(randomDice)
+    //  console.log(count1)
+    // number[diceImage].innerText = randomDice
+    // count++;
+    //     }
     }
 
 
 
-
-
+    function createRandom(){
+        diceImage.style.display="none";
+        number.style.display="none";
+        var random='';
+        var characters='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz'
+        for(var i=0;i<12;i++){
+            random+=characters.charAt(Math.floor(Math.random() *characters.length));
+        }
+        finalOutput.innerText=random;
+    }
 
 
 
