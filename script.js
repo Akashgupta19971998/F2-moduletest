@@ -129,9 +129,6 @@ function function2(){
         finalOutput.innerText=random;
         //congratulationImage.src="https://thumbs.dreamstime.com/z/congratulations-slogan-well-done-chalkboard-celebration-thumbs-up-76886933.jpg";
         congratulationImage.style.display="block"
-        // document.getElementById('image')
-        //             .style.display = "block";
-        console.log(congratulationImage)
     }
 
 
