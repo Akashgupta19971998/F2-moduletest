@@ -14,7 +14,7 @@ let form=document.getElementById('userForm')
 let userDetail_name=document.getElementById('userDetail_name')
 let userDetail_username=document.getElementById('userDetail_username')
 let diceImage=document.getElementById('dice_image')
-let number=document.getElementsByTagName('span')
+let number=document.getElementsByTagName('h1')
 
 function show(){
      form.style.display="block";
@@ -44,17 +44,14 @@ function function2(){
     let countDice=0;
     let countDiceAttempt=0;
 
-    function clickk(){
+    function clicked(){
         console.log("function called")
         if(countDice<=3){
     let  arr= ["1", "2", "3", "4", "5", "6"]
     let randomIndex = Math.floor(Math.random() * 6) // 0 - 5 only integers
     let randomDice = arr[randomIndex]
-     countDice+=Number(randomDice);
-     console.log(randomDice)
-     console.log(countDice)
+     diceSum+=Number(randomDice);
     number[0].innerText = randomDice;
-    console.log(number[0])
     countDice++;
         } 
         else{
