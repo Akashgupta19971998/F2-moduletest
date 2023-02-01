@@ -25,6 +25,7 @@ function show(){
      diceImage.style.display="none";
      congratulationImage.style.display="none"
     //  show().disabled=false;
+    image1.onclick=null;
 }
 
 function showOutput(){
@@ -33,6 +34,7 @@ function showOutput(){
     // diceImage.style.display="none";
     userDetail_name.innerText="Name : "+name.value;
     userDetail_username.innerText="Username : "+username.value;
+    image2.onclick=null;
 }
 
 // Make 2 functions
@@ -44,6 +46,7 @@ function function2(){
     userDetail_username.style.display="none";
     congratulationImage.style.display="none"
     finalOutput.style.display="none";
+    image3.onclick=null;
     //image3.style.display="none";
     // function rolldice(btn_id){
     //btns[btn_id].disabled = true
@@ -114,10 +117,8 @@ function function2(){
     // count++;
     //     }
     }
-
-
-
     function createRandom(){
+        image4.onclick=null;
         diceImage.style.display="none";
         number.style.display="none";
         sum.style.display="none";
