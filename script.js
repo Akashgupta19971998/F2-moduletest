@@ -20,17 +20,17 @@ let finalOutput=document.getElementById('randomText')
 let sum=document.getElementById('sum')
 let congratulationImage=document.getElementById('congratulationImage')
 
-image1.onclick=""
-image2.onclick=""
-image3.onclick=""
-image4.onclick=""
+// image1.onclick=""
+// image2.onclick=""
+// image3.onclick=""
+// image4.onclick=""
 
 function show(){
      form.style.display="block";
      diceImage.style.display="none";
      congratulationImage.style.display="none"
     //  show().disabled=false;
-    image1.onclick=null;
+    // image1.onclick=null;
 }
 
 function showOutput(){
@@ -39,7 +39,7 @@ function showOutput(){
     // diceImage.style.display="none";
     userDetail_name.innerText="Name : "+name.value;
     userDetail_username.innerText="Username : "+username.value;
-    image2.onclick=null;
+    // image2.onclick=null;
 }
 
 // Make 2 functions
@@ -51,7 +51,7 @@ function function2(){
     userDetail_username.style.display="none";
     congratulationImage.style.display="none"
     finalOutput.style.display="none";
-    image3.onclick=null;
+    // image3.onclick=null;
     //image3.style.display="none";
     // function rolldice(btn_id){
     //btns[btn_id].disabled = true
@@ -123,7 +123,7 @@ function function2(){
     //     }
     }
     function createRandom(){
-        image4.onclick=null;
+        // image4.onclick=null;
         diceImage.style.display="none";
         number.style.display="none";
         sum.style.display="none";
