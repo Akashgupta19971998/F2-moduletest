@@ -1,0 +1,22 @@
+.flex-container{
+  display: flex;
+ }
+ img{
+   height: 330px;
+   width: 330px;
+   flex-wrap: wrap;
+   margin: auto;
+   margin-top: 10px;
+   justify-content: space-evenly;
+ }
+ .from{
+   text-align: center;
+   font-size: 40px;
+
+ }
+ .userDataForm{
+   display: none;
+ }
+ #dice_image{
+  display: none;
+ }
